@@ -37,3 +37,4 @@ Launching a Font Request to download the _Noto Color Emoji Compat_ font by initi
 with `FontRequestEmojiCompatConfig`.
 * Following the FontRequest flow as demonstrated in the
 [Android EmojiCompat Sample project](https://github.com/android/user-interface-samples/tree/main/EmojiCompat)
+* Removed the Manifest provider for `EmojiCompatInitializer` as described [here](https://developer.android.com/develop/ui/views/text-and-emoji/emoji2#use-different-font-provider)
