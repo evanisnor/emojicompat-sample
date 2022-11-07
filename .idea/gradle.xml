@@ -9,6 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app-emojicompat-appcompat" />
             <option value="$PROJECT_DIR$/app-emojicompat-bundled" />
             <option value="$PROJECT_DIR$/app-emojicompat-fontrequest" />
           </set>
