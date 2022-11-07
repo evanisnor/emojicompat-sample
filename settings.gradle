@@ -1,1 +1,2 @@
 include ':app-emojicompat-bundled'
+include ':app-emojicompat-fontrequest'

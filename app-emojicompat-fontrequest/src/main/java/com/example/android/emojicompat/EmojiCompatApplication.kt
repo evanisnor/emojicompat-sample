@@ -25,13 +25,34 @@ import androidx.emoji2.text.FontRequestEmojiCompatConfig
 
 
 /**
- * This application uses EmojiCompat with Bundled Noto Color Emoji Font.
+ * This application uses EmojiCompat with [FontRequestEmojiCompatConfig]
  */
 class EmojiCompatApplication : Application() {
 
+    companion object {
+        private const val TAG = "EmojiCompatApplication"
+    }
+
     override fun onCreate() {
         super.onCreate()
-        val config = BundledEmojiCompatConfig(applicationContext)
+
+        // Use a downloadable font for EmojiCompat
+        val fontRequest = FontRequest(
+                "com.google.android.gms.fonts",
+                "com.google.android.gms",
+                "Noto Color Emoji Compat",
+                R.array.com_google_android_gms_fonts_certs)
+        val config = FontRequestEmojiCompatConfig(applicationContext, fontRequest)
+                .setReplaceAll(true)
+                .registerInitCallback(object : EmojiCompat.InitCallback() {
+                    override fun onInitialized() {
+                        Log.i(TAG, "EmojiCompat initialized")
+                    }
+
+                    override fun onFailed(throwable: Throwable?) {
+                        Log.e(TAG, "EmojiCompat initialization failed", throwable)
+                    }
+                })
         EmojiCompat.init(config)
     }
 
