@@ -38,3 +38,18 @@ with `FontRequestEmojiCompatConfig`.
 * Following the FontRequest flow as demonstrated in the
 [Android EmojiCompat Sample project](https://github.com/android/user-interface-samples/tree/main/EmojiCompat)
 * Removed the Manifest provider for `EmojiCompatInitializer` as described [here](https://developer.android.com/develop/ui/views/text-and-emoji/emoji2#use-different-font-provider)
+
+
+## Test - Android 11 Emulator
+
+EmojiCompat configurations that rely on FontRequest do not appear functional on an Android 11
+Emulator with up-to-date Google Play Services. The steps to resolve this issue provided
+[here](https://developer.android.com/develop/ui/views/text-and-emoji/emoji2#use-different-font-provider)
+have not resolved the issue.
+git
+Test: Multi-skin-toned handshake emoji should render successfully: 🫱🏿‍🫲🏻
+Result: Only renders when EmojiCompat is initialized with `BundledEmojiCompatConfig`
+
+| AppCompat | Bundled | FontRequest |
+|-----------|---------|-------------| 
+| ![app-emojicompat-appcompat.png](img/app-emojicompat-appcompat.png) | ![app-emojicompat-bundled.png](img/app-emojicompat-bundled.png) | ![app-emojicompat-fontrequest.png](img/app-emojicompat-fontrequest.png) |
