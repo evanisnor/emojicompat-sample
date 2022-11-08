@@ -51,6 +51,6 @@ Test: Multi-skin-toned handshake emoji should render successfully: 🫱🏿‍�
 
 Result: Only renders when EmojiCompat is initialized with `BundledEmojiCompatConfig`
 
-| AppCompat                                                                                    | Bundled | FontRequest |
-|----------------------------------------------------------------------------------------------|---------|-------------| 
-| <img alt="app-emojicompat-appcompat"git src="img/app-emojicompat-appcompat.png" width=220 /> | <img alt="app-emojicompat-bundled" src="img/app-emojicompat-bundled.png" width=220 /> | <img alt="app-emojicompat-fontrequest" src="img/app-emojicompat-fontrequest.png" width=220 /> |
+| AppCompat                                                                                 | Bundled | FontRequest |
+|-------------------------------------------------------------------------------------------|---------|-------------| 
+| <img alt="app-emojicompat-appcompat" src="img/app-emojicompat-appcompat.png" width=220 /> | <img alt="app-emojicompat-bundled" src="img/app-emojicompat-bundled.png" width=220 /> | <img alt="app-emojicompat-fontrequest" src="img/app-emojicompat-fontrequest.png" width=220 /> |
