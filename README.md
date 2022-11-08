@@ -39,8 +39,7 @@ with `FontRequestEmojiCompatConfig`.
 [Android EmojiCompat Sample project](https://github.com/android/user-interface-samples/tree/main/EmojiCompat)
 * Removed the Manifest provider for `EmojiCompatInitializer` as described [here](https://developer.android.com/develop/ui/views/text-and-emoji/emoji2#use-different-font-provider)
 
-
-## Test - Android 11 Emulator
+## Tests
 
 EmojiCompat configurations that rely on FontRequest do not appear functional on an Android 11
 Emulator with up-to-date Google Play Services. The steps to resolve this issue provided
@@ -51,6 +50,17 @@ Test: Multi-skin-toned handshake emoji should render successfully: 🫱🏿‍�
 
 Result: Only renders when EmojiCompat is initialized with `BundledEmojiCompatConfig`
 
-| AppCompat                                                                                 | Bundled | FontRequest |
-|-------------------------------------------------------------------------------------------|---------|-------------| 
-| <img alt="app-emojicompat-appcompat" src="img/app-emojicompat-appcompat.png" width=220 /> | <img alt="app-emojicompat-bundled" src="img/app-emojicompat-bundled.png" width=220 /> | <img alt="app-emojicompat-fontrequest" src="img/app-emojicompat-fontrequest.png" width=220 /> |
+| Device                                       | AppCompat                                                                                 | Bundled | FontRequest |
+|----------------------------------------------| ------------------------------------------------------------------------------------------|---------|-------------|
+| ❌ Emulator<br>Android 11<br>(Pixel 4 with Playstore) | <img alt="app-emojicompat-appcompat" src="img/app-emojicompat-appcompat.png" width=220 /> | <img alt="app-emojicompat-bundled" src="img/app-emojicompat-bundled.png" width=220 /> | <img alt="app-emojicompat-fontrequest" src="img/app-emojicompat-fontrequest.png" width=220 /> |
+| ✅ Real Device<br>Android 11<br>One Plus | <img alt="real-device-app-emojicompat-appcompat" src="img/real-device-app-emojicompat-appcompat.png" width=220 /> | <img alt="real-device-app-emojicompat-bundled" src="img/real-device-app-emojicompat-bundled.png" width=220 /> | <img alt="app-emojicompat-fontrequest" src="img/real-device-app-emojicompat-fontrequest.png" width=220 /> |
+
+
+## To Build
+
+```
+./gradlew assembleDebug
+adb install -r -t ./app-emojicompat-bundled/build/outputs/apk/debug/app-emojicompat-bundled-debug.apk
+adb install -r -t ./app-emojicompat-fontrequest/build/outputs/apk/debug/app-emojicompat-fontrequest-debug.apk
+adb install -r -t ./app-emojicompat-appcompat/build/outputs/apk/debug/app-emojicompat-appcompat-debug.apk
+```
