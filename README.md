@@ -46,10 +46,11 @@ EmojiCompat configurations that rely on FontRequest do not appear functional on 
 Emulator with up-to-date Google Play Services. The steps to resolve this issue provided
 [here](https://developer.android.com/develop/ui/views/text-and-emoji/emoji2#use-different-font-provider)
 have not resolved the issue.
-git
+
 Test: Multi-skin-toned handshake emoji should render successfully: 🫱🏿‍🫲🏻
+
 Result: Only renders when EmojiCompat is initialized with `BundledEmojiCompatConfig`
 
-| AppCompat | Bundled | FontRequest |
-|-----------|---------|-------------| 
-| ![app-emojicompat-appcompat.png](img/app-emojicompat-appcompat.png) | ![app-emojicompat-bundled.png](img/app-emojicompat-bundled.png) | ![app-emojicompat-fontrequest.png](img/app-emojicompat-fontrequest.png) |
+| AppCompat                                                                                    | Bundled | FontRequest |
+|----------------------------------------------------------------------------------------------|---------|-------------| 
+| <img alt="app-emojicompat-appcompat"git src="img/app-emojicompat-appcompat.png" width=220 /> | <img alt="app-emojicompat-bundled" src="img/app-emojicompat-bundled.png" width=220 /> | <img alt="app-emojicompat-fontrequest" src="img/app-emojicompat-fontrequest.png" width=220 /> |
