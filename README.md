@@ -52,7 +52,7 @@ Result: Only renders when EmojiCompat is initialized with `BundledEmojiCompatCon
 
 | Device                                       | AppCompat                                                                                 | Bundled | FontRequest |
 |----------------------------------------------| ------------------------------------------------------------------------------------------|---------|-------------|
-| ❌ Emulator<br>Android 11<br>(Pixel 4 with Playstore) | <img alt="app-emojicompat-appcompat" src="img/app-emojicompat-appcompat.png" width=220 /> | <img alt="app-emojicompat-bundled" src="img/app-emojicompat-bundled.png" width=220 /> | <img alt="app-emojicompat-fontrequest" src="img/app-emojicompat-fontrequest.png" width=220 /> |
+| ❌ Emulator<br>Android 11<br>(Pixel 4 with Playstore)<br>Running recent<br>version (22.39.15)<br> of Playstore | <img alt="app-emojicompat-appcompat" src="img/app-emojicompat-appcompat.png" width=220 /> | <img alt="app-emojicompat-bundled" src="img/app-emojicompat-bundled.png" width=220 /> | <img alt="app-emojicompat-fontrequest" src="img/app-emojicompat-fontrequest.png" width=220 /> |
 | ✅ Real Device<br>Android 11<br>One Plus | <img alt="real-device-app-emojicompat-appcompat" src="img/real-device-app-emojicompat-appcompat.png" width=220 /> | <img alt="real-device-app-emojicompat-bundled" src="img/real-device-app-emojicompat-bundled.png" width=220 /> | <img alt="app-emojicompat-fontrequest" src="img/real-device-app-emojicompat-fontrequest.png" width=220 /> |
 
 
